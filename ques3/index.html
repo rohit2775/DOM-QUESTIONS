@@ -128,7 +128,7 @@
     </div>
     <div class="input-group">
       <label for="password">Password</label>
-      <input type="text" id="password" placeholder="Enter password">
+      <input type="password" id=password" placeholder="Enter password">
     </div> 
     <div id="message">
         <h3></h3>
@@ -141,19 +141,26 @@
 
   <script>
 
-var inps = document.querySelectorAll('input[ type = "text"]')
+var inps = document.querySelectorAll('input[type = "text"]')
+var pass = document.querySelectorAll('input[type = "password"]')
 var h3 = document.querySelector("h3")
 
- var btn = document.querySelector("btn")
+ var btn = document.querySelector("#btn")
 
  btn.addEventListener("click", function(event){
-            event.preventDefault();
+            
             for(var i=0 ; i<inps.length ;i++ ){
                 if (inps [i].value.trim()  === ('')){
                     h3.textContent = "ERROR"
                     h3.style.color = "red"
+                
+                }   
+                if (pass .value.trim()  === ('')){
+                    h3.textContent = "ERROR"
+                    h3.style.color = "red"
                     break;
                 }
+            
                 else{
                     h3.textContent = "hogya login"
                 }
