@@ -25,3 +25,8 @@ var ans = arr1.filter((val)=>{
 console.log(ans );
 
 // also  array.find . and array.indexof()
+
+
+ // asynchronous javascript 
+
+ 
