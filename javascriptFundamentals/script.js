@@ -29,4 +29,17 @@ console.log(ans );
 
  // asynchronous javascript 
 
- 
+ async function getUsers() {
+  try {
+    let response = await fetch("https://jsonplaceholder.typicode.com/users");
+    
+    let data = await response.json();
+    
+    console.log("Users data:", data);
+  } 
+  catch (error) {
+    console.log("Error aaya:", error);
+  }
+}
+
+getUsers();
