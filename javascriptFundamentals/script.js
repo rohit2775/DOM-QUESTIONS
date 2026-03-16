@@ -35,11 +35,33 @@ console.log(ans );
     
     let data = await response.json();
     
-    console.log("Users data:", data);
+    // console.log("Users data:", data);
   } 
   catch (error) {
-    console.log("Error aaya:", error);
+    // console.log("Error aaya:", error);
   }
 }
 
 getUsers();
+
+
+//  nodejs file system and operations 
+
+
+ // write file 
+const fs = require("fs");
+
+fs.writeFile("demo.txt", "Hello Rohit bhai", (err) => {
+    if (err) throw err;
+    console.log("File created and data written");
+});
+
+
+ // copy file 
+
+ const fs = require("fs");
+
+fs.copyFile("demo.txt", "copy.txt", (err) => {
+    if (err) throw err;
+    console.log("File copied successfully");
+});
