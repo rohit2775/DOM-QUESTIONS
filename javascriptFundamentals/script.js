@@ -113,3 +113,5 @@ fs.rmdir("myfolder",{recursive :true} ,(err) => {
     console.log("Folder deleted");
 });
 // also we can use fs.rm
+// and many more , readfile, mkdir ... 
+
