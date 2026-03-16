@@ -65,3 +65,51 @@ fs.copyFile("demo.txt", "copy.txt", (err) => {
     if (err) throw err;
     console.log("File copied successfully");
 });
+
+// rename a file 
+
+const fs = require("fs");
+
+fs.rename("copy.txt", "newfile.txt", (err) => {
+    if (err) throw err;
+    console.log("File renamed successfully");
+});
+
+// append file 
+
+const fs = require("fs");
+
+fs.appendFile("demo.txt", "\nWelcome to Node.js", (err) => {
+    if (err) throw err;
+    console.log("Data appended");
+});
+
+
+// unlink file // to delete file 
+
+
+const fs = require("fs");
+
+fs.unlink("newfile.txt", (err) => {
+    if (err) throw err;
+    console.log("File deleted");
+});
+
+// rmdir to remove a directory/folder
+
+const fs = require("fs");
+
+fs.rmdir("myfolder", (err) => {
+    if (err) throw err;
+    console.log("Folder deleted");
+});
+
+//if the folder is empty then it will work , but if not then we have to use this 
+
+const fs = require("fs");
+
+fs.rmdir("myfolder",{recursive :true} ,(err) => {
+    if (err) throw err;
+    console.log("Folder deleted");
+});
+// also we can use fs.rm
