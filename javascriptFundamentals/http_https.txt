@@ -1,0 +1,3 @@
+   http is a rule through which the web browser and the server id get connrected and shae resources like (responses)
+
+   
