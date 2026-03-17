@@ -1,3 +1,41 @@
-   http is a rule through which the web browser and the server id get connrected and shae resources like (responses)
+   http is a rule through which the web browser and the server  communicate  (responses)
 
-   
+   const http = require("http");
+
+const server = http.createServer((req, res) => {
+
+    res.write("Hello Rohit bhai 👋");
+    res.end();
+
+});
+
+server.listen(3000, () => {
+    console.log("Server running on http://localhost:3000");
+});
+
+ here is how we can create server using http
+
+
+ HTTPS is the secure version of HTTP that uses SSL/TLS encryption to protect data.
+
+  this is better than http
+
+ const https = require("https");
+const fs = require("fs");
+
+const options = {
+  key: fs.readFileSync("key.pem"),
+  cert: fs.readFileSync("cert.pem")
+};
+
+https.createServer(options, (req, res) => {
+
+    res.write("Secure server 🔐");
+    res.end();
+
+}).listen(3000, () => {
+    console.log("HTTPS server running on https://localhost:3000");
+});
+
+ http is used in testing and https is used in production grade application 
+ 
